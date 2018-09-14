@@ -13,6 +13,17 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('province/[id]', function($id){
+	return Provinsi::find($id);
+});
+	
+
+Route::get('city/{id}', function($id) {
+    return Kota::find($id);
+});
+
+Route::get('login','API\UserController@login');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
