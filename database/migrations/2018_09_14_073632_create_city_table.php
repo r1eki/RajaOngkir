@@ -13,7 +13,7 @@ class CreateCityTable extends Migration
      */
     public function up()
     {
-        chema::create('city', function (Blueprint $table) {
+        Schema::create('kota', function (Blueprint $table) {
             $table->increments('city_id');
             $table->integer('province_id');
             $table->string('province');
@@ -31,6 +31,6 @@ class CreateCityTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('city');
+        Schema::dropIfExists('kota');
     }
 }
